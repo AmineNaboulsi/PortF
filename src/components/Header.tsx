@@ -16,7 +16,7 @@ const Header = () =>{
                         transition: { duration: 0.5 }
                     }}
                 ></motion.img>
-                <div className='flex flex-col gap-6 lg:*:w-1/2 w-full'>
+                <div className='flex flex-col gap-6  w-full'>
                     <motion.h1 
                     initial={{ opacity: 0, bottom: -100 }}
                     animate={{
