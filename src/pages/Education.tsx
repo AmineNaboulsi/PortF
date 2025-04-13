@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 import axiosClient from "@/lib/axiosClient";
 import useAxiosCached from "../hooks/CachedAxios";
+import { BlurFade } from "../components/magicui/blur-fade";
 
 type EducationData = {
   title: string;
@@ -44,7 +45,7 @@ export default function Education() {
   };
 
   return (
-    <motion.section
+    <BlurFade
       className="flex flex-col gap-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
@@ -101,6 +102,6 @@ export default function Education() {
           />
         </motion.div>
       )}
-    </motion.section>
+    </BlurFade>
   );
 }

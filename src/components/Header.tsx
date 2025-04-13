@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Linkedin, Github } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
-import FloatingBar from "../components/FloatingBar";
 
 const Header = () => {
   
@@ -98,8 +97,6 @@ const Header = () => {
                     </NavLink>
                 </nav>
             </div>
-            <FloatingBar />
-
         </header>
     );
 };

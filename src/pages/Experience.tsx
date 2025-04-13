@@ -3,6 +3,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 import axiosClient from "@/lib/axiosClient";
+import { BlurFade } from "../components/magicui/blur-fade";
 
 const Experience = () => {
   const [Experience, setExperience] = useState(false);
@@ -31,7 +32,7 @@ const Experience = () => {
       }, []);
 
   return (
-    <motion.section className="flex flex-col gap-3">
+    <BlurFade className="flex flex-col gap-3">
       <h2 className="text-blue-400 font-bold text-3xl">Experience</h2>
       {Experience ? Experience.map((exp, i) => (
         <Accordion type="single" collapsible key={i}>
@@ -66,7 +67,7 @@ const Experience = () => {
           />
         </motion.div>
       )}
-    </motion.section>
+    </BlurFade>
   );
 };
 
