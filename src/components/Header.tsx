@@ -6,7 +6,7 @@ import FloatingBar from "../components/FloatingBar";
 const Header = () => {
   
     return (
-        <header className="w-full border-b pb-4 mt-0 sm:mt-4 bg-white dark:bg-gray-900 dark:border-gray-700">
+        <header className="w-full border-b pt-2.5 pb-4 mt-0 sm:mt-4 bg-white dark:bg-gray-900 dark:border-gray-700">
             <div className="max-w-5xl mx-auto px-4">
                 <div className='flex sm:flex-row-reverse sm:items-center justify-between gap-4 flex-col items-start'>
                     <motion.img
