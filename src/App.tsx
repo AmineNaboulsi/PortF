@@ -1,27 +1,21 @@
-import Header from './components/Header'
-import Footer from './components/Footer'
-import About from './components/About'
-import Experience from './components/Experience'
-import Education from './components/Education'
-import FloatingBar from './components/FloatingBar'
-import { ThemeProvider } from "./components/theme-provider"
-
-function App() {
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Education from "./pages/Education";
+import Experience from "./pages/Experience";
+export default function App() {
   return (
-    <ThemeProvider>
-      <div className='md:max-w-[80%] xl:max-w-[45%] max-w-[90%] pt-8 mx-auto'>
-        <Header />
-          <main className='flex flex-col justify-center gap-3 pt-8.5'>
-            <About />
-            <Experience />
-            <Education />
-          </main>
-            <FloatingBar />
-        <Footer />
-      </div>
-    </ThemeProvider>
-  )
+    <Router>
+      <Header />
+      <main className="p-6 max-w-5xl mx-auto">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/experience" element={<Experience />} />
+        </Routes>
+      </main>
+    </Router>
+  );
 }
-
-export default App
